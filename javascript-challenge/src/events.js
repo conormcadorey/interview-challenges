@@ -30,9 +30,39 @@
 
  Your solution should not modify any of the function arguments
 */
+
+const eventsArray = [
+  {
+    id: 107,
+    startsAt: '2021-01-27T13:01:11Z', 
+    endsAt: '2021-01-27T15:01:11Z', 
+    title: 'Daily walk',
+  },
+  {
+    id: 107,
+    startsAt: '2021-01-27T13:01:11Z', 
+    endsAt: '2021-01-27T15:01:11Z', 
+    title: 'Daily walk',
+  },
+  {
+    id: 107,
+    startsAt: '2021-01-27T13:01:11Z', 
+    endsAt: '2021-01-27T15:01:11Z', 
+    title: 'Daily walk',
+  },
+  {
+    id: 107,
+    startsAt: '2021-01-27T13:01:11Z', 
+    endsAt: '2021-01-27T15:01:11Z', 
+    title: 'Daily walk',
+  }
+]
+
 const groupEventsByDay = (events) => {
   return events;
 };
+
+console.log(eventsArray)
 
 /** 
   Adjust the start and end date of an event so it maintains its total duration, but is moved `toDay`.

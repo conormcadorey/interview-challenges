@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 * {
   box-sizing: border-box;
 }
 body {
   background-color: rgb(229, 233, 244);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,13 +18,344 @@ body {
   padding: 40px;
 }
 
-.Container {
-  align-items: center;
+.container {
+  width: 100%;
+}
+
+.containerInner {
+  border-radius: 60px;
+  height: 500px;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+#upper {
   background-color: rgb(62, 126, 184);
-  border-radius: 25px;
   color: white;
-  display: flex;
-  flex-direction: column;
+  height: 590px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#lower {
+  background-color: white;
+  margin-top: -100px;
+  color: black;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows:minmax(80px, auto);
+  grid-gap: 0rem;
+  justify-items: stretch;
+  align-items: center;
+}
+
+.box1 {
+  grid-column: 1/4;
+  justify-self: start;
+  display: inline-block;
+}
+
+.box2 {
+  grid-column: 4/5;
+  justify-self: end;
+  display: inline-block;
+}
+
+.box3 {
+  grid-column: 1/5;
+  justify-self: center;
+}
+
+.box4 {
+  grid-column: 1/5;
+}
+
+.box5 {
+  grid-column: 1/5;
+}
+
+.box6 {
+  grid-column: 1/5;
+  justify-self: center;
+}
+
+.userName {
   font-weight: bold;
-  padding: 40px;
+  padding-top: 3rem;
+}
+
+.date {
+  opacity: 0.7;
+  margin-top: -0.5rem;
+}
+
+.notifications {
+  border-radius: 25px;
+  padding: 1rem;
+  margin-top: 4rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 70px;
+  width: 70px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBar {
+  width: 100%;
+  border-radius: 25px;
+  padding: 1.5rem 2.5rem;
+  margin-top: 3rem;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  color: white;
+  font-size:18px;
+  font-weight: bold;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  position: relative;
+}
+
+.searchIcon {
+  margin-top: -2.8rem;
+  margin-left: 1rem;
+  position: absolute;
+}
+
+.emojiTitle {
+  font-weight: 800;
+  display: inline-block;
+}
+
+.dot {
+  background-color: white;
+  height: 7px;
+  width: 7px;
+  margin: 3px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#dotWhite {
+  background-color: white;
+}
+
+#dotBlack {
+  background-color: black;
+}
+
+#dotGrey {
+  background-color: rgb(119, 134, 139);
+}
+
+.dotMenu {
+  cursor: pointer;
+}
+
+.emojiGrid {
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.emoji {
+  border-radius: 25px;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 70px;
+  width: 70px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.emoji:hover {
+  background-color: white;
+  transition: 0.4s;
+}
+
+.emojiTextGrid {
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin-top: -2.2rem;
+}
+
+.emojiTextItem {
+  font-weight: 600;
+}
+
+.resizeBar {
+  height: 9px;
+  width: 55px;
+  border-radius: 10px;
+  background-color: rgba(170, 196, 242, 0.5);
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+.cardsTitle {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.cardContainer {
+  color: black;
+  background-color: white;
+  height: 280px;
+  overflow: auto;
+  scrollbar-width: none; 
+  border-bottom: 2px solid rgba(170, 196, 242, 0.5);
+}
+
+/* safari/chrome */
+.cardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  padding: 1rem;
+  min-width: 100%;
+  border-radius: 25px;
+  border: 1px solid rgba(170, 196, 242, 0.5);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: white;
+  border: 1px solid white;
+  box-shadow: 0px 20px 40px rgba(92, 187, 246, 0.2);
+}
+
+.cardImg {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 1rem;
+  background-color: rgb(234, 122, 25);
+  height: 70px;
+  width: 70px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img1 {
+  background-color: rgb(234, 122, 25);
+}
+
+#img2 {
+  background-color: rgb(25, 112, 234);
+}
+
+#img3 {
+  background-color: rgb(247, 69, 215);
+}
+
+.cardBody {
+  display: inline-block;
+  padding: 1rem;
+  padding-right: 4rem;
+}
+
+.cardSubtext {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: rgb(119, 134, 139);
+}
+
+.navGrid {
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2.5rem;
+  color: rgba(170, 196, 242, 0.5);
+  position: relative;
+}
+
+.navItem {
+  cursor: pointer;
+}
+
+.navItem:hover {
+  color: rgb(62, 126, 184);
+}
+
+#navActive {
+  color: rgb(62, 126, 184);
+}
+
+.blob {
+  width: 40px;
+  height: 40px;
+  border-radius: 0% 100% 100% 50% / 100% 100% 0% 50%;
+  transform: rotate(135deg);
+  margin-top: 40px;
+  background-color: rgb(62, 126, 184);
+  display: block;
+  position: absolute;
+}
+
+@media only screen and (max-width: 430px) {
+  .App {
+    padding: 2px;
+  }
+  .containerInner {
+    border-radius: 65px;
+  }
+  #upper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #lower {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .App {
+    padding: 2px;
+  }
+  .containerInner {
+    border-radius: 45px;
+  }
+  #upper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #lower {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

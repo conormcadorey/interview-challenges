@@ -11,7 +11,8 @@ In the `src` folder there are three files: `index.js` which you can ignore,
 
 You sould edit the `App.css` and `App.js` files.
 
-You don't need to be pixel perfect its ok if the font sizes and spacing are slightly different, but try to match the design closely. 
+You don't need to be pixel perfect its ok if the font sizes and spacing are
+slightly different, but try to match the design closely.
 
 Your finished piece doesn't need to be fully responsive, but it shouldn't
 completely explode on smaller or larger screen sizes.
@@ -51,6 +52,8 @@ Here are some things you _shouldn't_ do
 
 - Set up a linting framework
 - Spend _any_ time getting it to work in internet explorer
-- Spend time supporting outdated browser features, if it is supported in the latest Chrome, Firefox / Safari and the mobile versions you are good to go
-- Spend _any_ time manually formatting your code (get the computer to do thisfor you! Most editors have an auto-format feature, use that)
+- Spend time supporting outdated browser features, if it is supported in the
+  latest Chrome, Firefox / Safari and the mobile versions you are good to go
+- Spend _any_ time manually formatting your code (get the computer to do thisfor
+  you! Most editors have an auto-format feature, use that)
 - Get someone else to do this for you (we follow up with an in-person exercise)
