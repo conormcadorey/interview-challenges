@@ -30,6 +30,7 @@
 
  Your solution should not modify any of the function arguments
 */
+const moment = require("moment"); 
 
 const eventsArray = [
   {
@@ -39,30 +40,47 @@ const eventsArray = [
     title: 'Daily walk',
   },
   {
-    id: 107,
-    startsAt: '2021-01-27T13:01:11Z', 
-    endsAt: '2021-01-27T15:01:11Z', 
-    title: 'Daily walk',
+    id: 108,
+    startsAt: '2021-01-28T13:01:11Z', 
+    endsAt: '2021-01-28T15:01:11Z', 
+    title: 'Workout',
   },
   {
-    id: 107,
-    startsAt: '2021-01-27T13:01:11Z', 
-    endsAt: '2021-01-27T15:01:11Z', 
-    title: 'Daily walk',
+    id: 110,
+    startsAt: '2021-01-30T13:01:11Z', 
+    endsAt: '2021-01-30T15:01:11Z', 
+    title: 'Shopping',
   },
   {
-    id: 107,
-    startsAt: '2021-01-27T13:01:11Z', 
-    endsAt: '2021-01-27T15:01:11Z', 
-    title: 'Daily walk',
+    id: 109,
+    startsAt: '2021-01-28T13:01:11Z', 
+    endsAt: '2021-01-28T15:01:11Z', 
+    title: 'Study',
   }
 ]
 
 const groupEventsByDay = (events) => {
+
+  //sort events 
+  //compare start date of each event to sort in acsending order 
+  const sortedEvents = events.sort((firstEvent, secondEvent) => 
+     moment(firstEvent.startsAt) - moment(secondEvent.startsAt)
+  )
+
+  //get days between each event
+  //use returned values as keys 
+  const daysBetweenEvents = (a, b) => {
+    return result = moment(a.startsAt).diff(moment(b.startsAt), 'days');
+  }
+
+  //assign key to grouped events 
+
+
   return events;
 };
 
-console.log(eventsArray)
+console.log(groupEventsByDay(eventsArray))
+
 
 /** 
   Adjust the start and end date of an event so it maintains its total duration, but is moved `toDay`.
