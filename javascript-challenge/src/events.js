@@ -61,11 +61,23 @@ const eventsArray = [
 
 const groupEventsByDay = (events) => {
 
+  /*
+  Attempted logic 
+  1) Sort the events in ascending order by date using moment 
+  2) reduce to events into a single object using reduce()
+  3) work out the number-of-days difference between the events taking place, using moment to compare dates 
+  4) assign the difference between days, starting with 0 as keys to the relevent events  
+  */
+
   //sort events 
   //compare start date of each event to sort in acsending order 
   const sortedEvents = events.sort((firstEvent, secondEvent) => 
      moment(firstEvent.startsAt) - moment(secondEvent.startsAt)
   )
+
+  let reduceEvents = sortedEvents.reduce((acc, currentEvent) => {
+
+  }, {});
 
   //get days between each event
   //use returned values as keys 
@@ -74,12 +86,10 @@ const groupEventsByDay = (events) => {
   }
 
   //assign key to grouped events 
-
-
   return events;
 };
 
-console.log(groupEventsByDay(eventsArray))
+console.log(groupEventsByDay(reduceEvents))
 
 
 /** 
